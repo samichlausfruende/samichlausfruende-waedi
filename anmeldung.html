@@ -22,6 +22,8 @@
 <main id="inhalt" class="wrap">
   <h1>Anmeldung</h1>
 
+  <p class="schluss" data-nur-wenn-leer="anmeldungAb"><strong>Anmeldeschluss:</strong> <span data-feld="anmeldeschluss"></span>, solange es freie Plätze hat.</p>
+
   <div class="karte hinweis" data-nur-wenn="anmeldungAb">
     <p><strong>Die Anmeldung ist ab dem <span data-feld="anmeldungAb"></span> möglich.</strong> Bei Fragen schreiben Sie uns über das <a href="kontakt.html">Kontaktformular</a>.</p>
   </div>
@@ -29,7 +31,7 @@
   <div class="raster" data-nur-wenn-leer="anmeldungAb">
     <div class="karte anm">
       <h2>Besuch im Chlaushüsli</h2>
-      <p><span data-feld="chlaushuesliDaten"></span><br>Anmeldeschluss: <span data-feld="chlaushuesliSchluss"></span>, solange es freie Plätze hat.</p>
+      <p><span data-feld="chlaushuesliDaten"></span></p>
       <p>Die Anmeldung läuft über Slotr: Zeitfenster wählen und die Namen der Kinder angeben.</p>
       <p><a class="knopf" data-link="chlaushuesliLink" href="#">Zur Anmeldung</a></p>
     </div>
@@ -38,8 +40,6 @@
       <dl class="eckdaten">
         <dt>Wann</dt>
         <dd><span data-feld="hausbesucheDaten"></span></dd>
-        <dt>Anmeldeschluss</dt>
-        <dd><span data-feld="hausbesucheSchluss"></span>, solange es freie Plätze hat.</dd>
         <dt>Anmeldung</dt>
         <dd>bevorzugt per E-Mail</dd>
         <dt>E-Mail</dt>

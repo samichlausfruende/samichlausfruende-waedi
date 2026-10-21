@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt – Samichlausfründe Wädi</title>
+<meta name="description" content="Kontakt zu den Samichlausfründen Wädi.">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_CH">
+<meta property="og:site_name" content="Samichlausfründe Wädi">
+<meta property="og:title" content="Kontakt – Samichlausfründe Wädi">
+<meta property="og:description" content="Kontakt zu den Samichlausfründen Wädi.">
+<meta property="og:image" content="https://samichlausfruende-waedi.ch/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<header id="kopf"></header>
+<main id="inhalt" class="wrap">
+  <h1>Kontakt</h1>
+  <p class="einstieg">Haben Sie Fragen? Schreiben Sie uns.</p>
+
+  <div class="raster">
+    <div class="karte">
+      <h2>Direkt erreichen</h2>
+      <p>Allgemeine Fragen:<br><a data-mail="emailAllgemein" href="#">info@samichlausfruende-waedi.ch</a></p>
+      <p>Anmeldung Hausbesuch:<br><a data-mail="emailAnmeldung" href="#">samichlaus@samichlausfruende-waedi.ch</a></p>
+      <p>Chlaustelefon:<br><a data-tel href="#">078 620 02 02</a><br>In der Regel <span data-feld="telefonZeiten"></span> erreichbar. <span data-feld="telefonHinweis"></span></p>
+    </div>
+    <div class="karte">
+      <h2>Nachricht senden</h2>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <!-- Zugangsschlüssel von web3forms.com hier eintragen (kostenlos, per E-Mail) -->
+        <input type="hidden" name="access_key" value="fc319438-4968-4ef7-b026-263e56fa4032">
+        <input type="hidden" name="from_name" value="Webseite Samichlausfründe Wädi">
+        <input type="hidden" name="redirect" value="https://samichlausfruende-waedi.ch/danke.html">
+        <input type="checkbox" name="botcheck" class="falle" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label>Name <input name="name" required autocomplete="name"></label>
+        <label>E-Mail <input type="email" name="email" required autocomplete="email"></label>
+        <label>Betreff <input name="subject" required></label>
+        <label>Nachricht (optional) <textarea name="message"></textarea></label>
+        <p style="font-size:.9rem;margin:0">Mit dem Absenden stimmen Sie unserer <a href="datenschutz.html">Datenschutzerklärung</a> zu.</p>
+        <button class="knopf" type="submit">Senden</button>
+      </form>
+    </div>
+  </div>
+</main>
+<footer id="fuss"></footer>
+<script src="daten.js"></script>
+<script src="seite.js"></script>
+</body>
+</html>

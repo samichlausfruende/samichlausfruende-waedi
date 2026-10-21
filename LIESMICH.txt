@@ -1,0 +1,14 @@
+Samichlausfründe Wädi - neue Webseite (Testversion)
+===================================================
+Zum Anschauen: "index.html" doppelklicken, sie öffnet sich im Browser.
+Alle Dateien müssen im selben Ordner bleiben. Für die Karte auf der
+Seite "Chlaushüsli" muss der Computer online sein.
+
+Jährliche Angaben (Anmeldedatum, Termine, Slotr-Link, Telefon, E-Mail):
+Datei "daten.js". Nicht doppelklicken, sondern Rechtsklick > "Öffnen mit" > Editor/TextEdit.
+Farben und Schriftgrössen: Datei "stil.css", ganz oben.
+Vorlage "Lob und Tadel": Datei im Ordner "downloads" ersetzen (Name gleich lassen).
+
+Noch offen:
+- Echt testen auf iPhone und Android
+- GitHub-Konto, Veröffentlichung und Domain-Umstellung

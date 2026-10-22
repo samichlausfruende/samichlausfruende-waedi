@@ -16,6 +16,7 @@
     ["kontakt.html", "Kontakt"]
   ];
   var aktuell = location.pathname.split("/").pop() || "index.html";
+  if (aktuell === "anmeldung-hausbesuch.html") aktuell = "anmeldung.html";
 
   var nav = MENU.map(function (m) {
     var cur = aktuell === m[0] ? ' aria-current="page"' : "";

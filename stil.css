@@ -120,6 +120,7 @@ form { display: grid; gap: 14px; margin-top: 0; }
 form .knopf { justify-self: start; min-width: 155px; }
 button.knopf { font-family: inherit; line-height: 1.6; }
 label { font-weight: 600; display: grid; gap: 4px; }
+select { font: inherit; padding: 10px 12px; border-radius: 0; border: 1.5px solid var(--linie); background: var(--papier); color: var(--text); width: 100%; }
 input, textarea {
   font: inherit; padding: 10px 12px; border-radius: 0; border: 1.5px solid var(--linie);
   background: var(--papier); color: var(--text); width: 100%;
@@ -192,3 +193,14 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .figur-gross { display: none; }
   .figur-handy { display: block; width: 100px; margin: .3rem 0 .6rem 1.2rem; }
 }
+
+/* Formular Hausbesuch */
+form h2 { margin: .8rem 0 0; font-size: 1.15rem; }
+form h2:first-of-type { margin-top: 0; }
+.hilfe { font-weight: 400; font-size: .95rem; }
+select, input, textarea { font-weight: 400; }
+
+#kinder { display: grid; gap: 14px; }
+#kinder:empty { display: none; }
+#kinder p { margin: 0; }
+.kind { display: grid; grid-template-columns: 1fr 5.5rem; gap: 10px; align-items: end; }

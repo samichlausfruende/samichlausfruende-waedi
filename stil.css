@@ -184,6 +184,11 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 .nur-handy { display: none; margin-top: 2rem; }
 @media (max-width: 719px) { .nur-handy { display: block; } }
 
-/* Figur (Samichlaus mit Kind) auf «Über uns»: rechts, beginnt auf Höhe des Seitentitels */
+/* Figur (Samichlaus mit Kind) auf «Über uns»: rechts am Textrand.
+   Computer: beginnt auf Höhe des Seitentitels. Handy: neben dem ersten Absatz. */
 .figur { float: right; width: 150px; height: auto; margin: 0 0 .8rem 1.6rem; }
-@media (max-width: 559px) { .figur { width: 96px; margin-left: 1rem; } }
+.figur-handy { display: none; }
+@media (max-width: 559px) {
+  .figur-gross { display: none; }
+  .figur-handy { display: block; width: 100px; margin: .3rem 0 .6rem 1.2rem; }
+}

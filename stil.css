@@ -115,7 +115,9 @@ details > div { padding: 0 18px 16px; }
 details > div > :first-child, details > div > [hidden]:first-child + :not([hidden]) { margin-top: 0; }
 details > div > :last-child { margin-bottom: 0; }
 
-form { display: grid; gap: 14px; margin-top: 1rem; }
+form { display: grid; gap: 14px; margin-top: 0; }
+form .knopf { justify-self: start; min-width: 155px; }
+button.knopf { font-family: inherit; line-height: 1.6; }
 label { font-weight: 600; display: grid; gap: 4px; }
 input, textarea {
   font: inherit; padding: 10px 12px; border-radius: 0; border: 1.5px solid var(--linie);

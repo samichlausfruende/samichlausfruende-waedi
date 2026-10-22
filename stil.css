@@ -111,7 +111,9 @@ summary::-webkit-details-marker { display: none; }
 summary::before { content: "+"; position: absolute; left: 18px; top: 50%; transform: translateY(-50%); font-weight: 700; color: var(--rot); font-size: 1.2rem; line-height: 1; }
 details[open] > summary::before { content: "\2212"; }
 details[open] > summary { color: var(--rot); }
-details > div { padding: 0 18px 14px; }
+details > div { padding: 0 18px 16px; }
+details > div > :first-child, details > div > [hidden]:first-child + :not([hidden]) { margin-top: 0; }
+details > div > :last-child { margin-bottom: 0; }
 
 form { display: grid; gap: 14px; margin-top: 1rem; }
 label { font-weight: 600; display: grid; gap: 4px; }

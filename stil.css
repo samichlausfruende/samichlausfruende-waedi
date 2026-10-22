@@ -204,3 +204,7 @@ select, input, textarea { font-weight: 400; }
 #kinder:empty { display: none; }
 #kinder p { margin: 0; }
 .kind { display: grid; grid-template-columns: 1fr 5.5rem; gap: 10px; align-items: end; }
+
+/* Zahlenfelder ohne Hoch-/Runter-Pfeile */
+input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; appearance: none; margin: 0; }

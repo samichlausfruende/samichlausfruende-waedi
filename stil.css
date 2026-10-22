@@ -62,7 +62,8 @@ main { padding-block: 2rem 3rem; }
 .hinweis { border-left: 5px solid var(--rot); }
 .hinweis > p { margin: 0; }
 .hinweis > p:not([hidden]) ~ p:not([hidden]) { margin-top: 1em; }
-.raster { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.raster { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 1.2rem 0; }
+.raster > .karte { margin: 0; }
 
 .knopf {
   display: inline-block; background: var(--rot); color: #fff; text-decoration: none;

@@ -183,3 +183,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 /* Button «Zur Anmeldung» am Seitenende: nur auf dem Handy */
 .nur-handy { display: none; margin-top: 2rem; }
 @media (max-width: 719px) { .nur-handy { display: block; } }
+
+/* Figur (Samichlaus mit Kind) auf «Über uns»: rechts, beginnt auf Höhe des Seitentitels */
+.figur { float: right; width: 150px; height: auto; margin: 0 0 .8rem 1.6rem; }
+@media (max-width: 559px) { .figur { width: 96px; margin-left: 1rem; } }

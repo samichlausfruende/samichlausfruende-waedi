@@ -1,5 +1,5 @@
 /* Setzt Kopf, Navigation und Fusszeile ein und füllt die Jahresdaten aus daten.js.
-   Muss normalerweise nicht angepasst werden. Neue Seite im Menü: Eintrag in MENU ergänzen. */
+   Muss normalerweise nicht angepasst werden. */
 (function () {
   var D = window.DATEN || {};
   // Ab dem Anmeldedatum den Hinweis "Anmeldung ab ..." ausblenden und die Anmeldung zeigen
@@ -7,45 +7,25 @@
     var t = new Date(), heute = t.getFullYear() + "-" + ("0" + (t.getMonth() + 1)).slice(-2) + "-" + ("0" + t.getDate()).slice(-2);
     if (heute >= D.anmeldungAbDatum) D.anmeldungAb = "";
   }
-  var MENU = [
-    ["ueber-uns.html", "Über uns"],
-    ["hausbesuche.html", "Hausbesuche"],
-    ["chlaushuesli.html", "Chlaushüsli"],
-    ["anmeldung.html", "Anmeldung"],
-    ["fa.html", "F&A"],
-    ["kontakt.html", "Kontakt"]
-  ];
-  var aktuell = location.pathname.split("/").pop() || "index.html";
-  if (aktuell === "anmeldung-hausbesuch.html" || aktuell === "danke-anmeldung.html") aktuell = "anmeldung.html";
-
-  var nav = MENU.map(function (m) {
-    var cur = aktuell === m[0] ? ' aria-current="page"' : "";
-    return '<li><a href="' + m[0] + '"' + cur + ">" + m[1] + "</a></li>";
-  }).join("");
-
   document.documentElement.classList.add("js");
+  // Kopf und Fusszeile stehen fest in jeder Seite (Menü funktioniert so auch ohne JavaScript).
+  // Hier kommt nur der Menüknopf für das Handy dazu.
   var kopf = document.getElementById("kopf");
-  if (kopf) {
-    kopf.className = "kopf";
-    kopf.innerHTML =
-      '<div class="wrap"><a class="logolink" href="index.html"><img class="logo" src="img/logo.jpg" alt="Samichlausfründe Wädi – Startseite"></a>' +
-      '<button type="button" class="menueknopf" aria-expanded="false" aria-controls="hauptmenue"><span class="balken" aria-hidden="true"></span><span class="menuetext">Menü</span></button>' +
-      '<nav id="hauptmenue" aria-label="Hauptmenü"><ul>' + nav + "</ul></nav></div>";
-    var knopf = kopf.querySelector(".menueknopf");
-    var menue = kopf.querySelector("nav");
+  var menue = kopf && kopf.querySelector("nav");
+  if (menue) {
+    var knopf = document.createElement("button");
+    knopf.type = "button";
+    knopf.className = "menueknopf";
+    knopf.setAttribute("aria-expanded", "false");
+    knopf.setAttribute("aria-controls", "hauptmenue");
+    knopf.innerHTML = '<span class="balken" aria-hidden="true"></span><span class="menuetext">Menü</span>';
+    menue.parentNode.insertBefore(knopf, menue);
     var setze = function (offen) {
       knopf.setAttribute("aria-expanded", offen ? "true" : "false");
       menue.classList.toggle("offen", offen);
     };
     knopf.addEventListener("click", function () { setze(knopf.getAttribute("aria-expanded") !== "true"); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") { setze(false); knopf.focus(); } });
-  }
-
-  var fuss = document.getElementById("fuss");
-  if (fuss) {
-    fuss.innerHTML =
-      '<div class="wrap"><span>© ' + (D.jahr || "") + " Samichlausfründe Wädi</span>" +
-      '<span><a href="datenschutz.html">Datenschutz</a></span></div>';
   }
 
   // data-feld="name" -> Text ersetzen; data-link="name" -> href setzen

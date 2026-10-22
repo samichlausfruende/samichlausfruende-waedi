@@ -18,7 +18,21 @@
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
-<header id="kopf"></header>
+<header id="kopf" class="kopf">
+  <div class="wrap">
+    <a class="logolink" href="index.html"><img class="logo" src="img/logo.jpg" alt="Samichlausfründe Wädi – Startseite"></a>
+    <nav id="hauptmenue" aria-label="Hauptmenü">
+    <ul>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="hausbesuche.html">Hausbesuche</a></li>
+      <li><a href="chlaushuesli.html">Chlaushüsli</a></li>
+      <li><a href="anmeldung.html" aria-current="page">Anmeldung</a></li>
+      <li><a href="fa.html">F&amp;A</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    </nav>
+  </div>
+</header>
 <main id="inhalt" class="wrap">
   <h1>Anmeldung Hausbesuch</h1>
 
@@ -27,8 +41,6 @@
   </div>
 
   <div data-nur-wenn-leer="anmeldungAb">
-    <p class="einstieg">Wann: <strong><span data-feld="hausbesucheDaten"></span></strong><br>Anmeldeschluss: <strong><span data-feld="anmeldeschluss"></span></strong>, solange es freie Plätze hat.</p>
-
     <div class="karte">
       <form action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="fc319438-4968-4ef7-b026-263e56fa4032">
@@ -61,7 +73,9 @@
     </div>
   </div>
 </main>
-<footer id="fuss"></footer>
+<footer id="fuss">
+  <div class="wrap"><span>© <span data-feld="jahr">2026</span> Samichlausfründe Wädi</span><span><a href="datenschutz.html">Datenschutz</a></span></div>
+</footer>
 <script src="daten.js"></script>
 <script src="seite.js"></script>
 <script>

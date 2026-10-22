@@ -72,6 +72,12 @@
     if (!D[el.getAttribute("data-nur-wenn")]) el.hidden = true;
   });
 
+  // Weiterleitung nach dem Absenden: Web3Forms (Gratis-Version) erlaubt nur Seiten derselben Domain.
+  // Darum wird die Adresse der Dankeseite aus der aktuellen Adresse gebildet.
+  document.querySelectorAll("input[data-seite]").forEach(function (el) {
+    try { el.value = new URL(el.getAttribute("data-seite"), location.href).href; } catch (e) {}
+  });
+
   // Fotogalerien: Pfeile für den Computer (auf dem Handy wird gewischt)
   document.querySelectorAll(".galerie").forEach(function (g) {
     var wrap = document.createElement("div");

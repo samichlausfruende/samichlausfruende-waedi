@@ -178,3 +178,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 @media (min-width: 700px) {
   .galerie:has(figure:nth-child(2):last-child) figure { flex-basis: calc((100% - 10px) / 2); }
 }
+
+/* Button «Zur Anmeldung» am Seitenende: nur auf dem Handy */
+.nur-handy { display: none; margin-top: 2rem; }
+@media (max-width: 719px) { .nur-handy { display: block; } }
